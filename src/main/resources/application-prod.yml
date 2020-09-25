@@ -1,0 +1,10 @@
+pay:
+  nopassword:
+    maxAmountPerDeal: 2000 # 免密支付单次交易最大限额
+    maxAmountTotal: 10000 # 免密支付每日交易最大限额
+    user: #用户
+      name: 传智-虎哥
+      age: 21
+      girls:
+        - 古力娜扎
+        - 迪丽热巴

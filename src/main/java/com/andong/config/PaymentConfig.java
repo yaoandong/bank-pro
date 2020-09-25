@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class PaymentConfig {
 
     /**
@@ -18,8 +18,7 @@ public class PaymentConfig {
     private long maxAmountTotal;
 
     /**
-     * 通过{@link Bean @Bean}注解声明一个要注入到Spring中的对象。等同于{@code <bean></bean>}标签
-     * @return
+     * 通过 @Bean注解声明一个要注入到Spring中的对象。
      */
     @Bean
     public PaymentDo paymentDo(){

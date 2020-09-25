@@ -1,4 +1,32 @@
-pay:
-  nopassword:
-    maxAmountPerDeal: 1000 # 免密支付单次交易最大限额
-    maxAmountTotal: 5000 # 免密支付每日交易最大限额
+server:
+  port: 8081 #修改服务端口
+
+
+spring:
+  #配置文件指向
+  profiles:
+    active: dev
+
+  #整合MVC
+  mvc:
+    servlet:
+      load-on-startup: 1 # 修改Servlet随tomcat一起初始化
+      path: / # 修改DispatcherServlet映射路径
+
+  #关联数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/banktest?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+
+  #日志信息
+  logging:
+    level:
+      cn.itcast: debug
+
+mybatis:
+  type-aliases-package: com.andong.entity # mybatis 别名扫描
+  mapper-locations: classpath:mappers/*.xml # mapper.xml文件位置,如果没有映射文件，请注释掉
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰映射 
